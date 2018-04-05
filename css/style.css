@@ -12,6 +12,9 @@ body {
 .hidden{
     display: none;
 }
+.color-white{
+    color: white;
+}
 h1,
 h2,
 h3,
@@ -46,6 +49,26 @@ label {
     text-align: center;
 }
 /* Mobile first queries */
+
+.box-header-content{
+    position: relative;
+    z-index: 2;
+}
+.box-footer{
+    background-color: white;
+    padding: 20px;
+    font-weight: bold;
+}
+.first-text{
+    color: #938f8f;
+    margin-bottom: -24px;
+}
+.second-text{
+    color: black;
+}
+.box-footer h3{
+    color: #128eb2;
+}
 /* -------------------Menu--------------------------------------- */
 .nav-scrolled{
         top: 0;
@@ -101,7 +124,7 @@ a.pure-menu-link {
       }
       
       .custom-toggle .bar {
-          background-color: white;
+          background-color: black;
           display: block;
           width: 20px;
           height: 2px;
@@ -172,10 +195,17 @@ a.pure-menu-link {
         float:none;
         display:list-item;
     }
+.second-text a{
+    text-decoration: none;
+    color: #2293c8;
+}
+.second-text a:hover{
+    text-decoration: none;
+}
 /*--------------- splash-container ----------------------------*/
 a.btn-pay,a.btn-paytwo {
     background-color: #0d72b9;
-    padding: 10px 31px;
+    padding: 4px 26px;
     border-radius:  36px;
     color: white;
     text-decoration:  none;
@@ -193,7 +223,7 @@ a.btn-pay:hover, a.btn-paytwo:hover{
      z-index:  9;
     width: 100%;
     background: rgba(231,56,39,1);
-    background: #1e5799;
+    background: #f4f4f4;
     background: linear-gradient(180deg,  13%,#f4f4f4 43%,#f4f4f4 20.4%,#f4f4f4 112%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#cecece',GradientType=1 );
 }
@@ -302,7 +332,7 @@ ul.title-course.title-course-two li {
 /*---------------Three pay----------------------------*/
 img.img-pay.pure-img-responsive {
     width: 130px;
-    height: 80px;
+    height: 93px;
 }
 
 .box-payed{
@@ -461,6 +491,21 @@ a.btn-paytwo {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
+ul.account, ul {
+    list-style: none;
+    padding-left: 2px;
+}
+.account span {
+    font-weight: bold;
+}
+ul.account li{
+    font-weight: 100;
+}
+select#mySelect {
+    width:  100%;
+}
+
 /*---------------Footer----------------------------*/
 .footer{
     background-color: #0d72b9;
@@ -548,6 +593,34 @@ p.name-author {
 .pure-menu-active>.pure-menu-link, .pure-menu-link:focus, .pure-menu-link:hover{
     background-color: transparent;
 }
+img.img-banner.pure-img-responsive.img-header-one,img.img-banner.pure-img-responsive.img-header-two{
+    display: none;
+}
+.trainform{
+    height: 200px;
+    background-color:  #0d72b9;
+    position: absolute;
+}
+.choice-path h2,.choice-path p
+{
+    color: black;
+}
+img.img-banner.pure-img-responsive {
+    width: 200px;
+}
+.img-banner-position{
+     position: relative;
+}
+img.pure-img-responsive.logo-footer {
+    display:  none;
+}
+ul.list-footer li {
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+.content-path p {
+        line-height: 18pt;
+    }
 /* -----------------------------------------Larger than mobile -----------------------------------------*/
 @media (min-width: 400px) {
     img.pure-img-responsive.logo-footer {
@@ -569,6 +642,61 @@ p.name-author {
 
 /* -----------------------------------------Larger than tablet -----------------------------------------*/
 @media (min-width: 750px) {
+    
+    img.pure-img-responsive.logo-footer {
+        display:  inherit;
+        width: 150px;
+    }
+    .img-banner-position{
+        top: 95px;
+    }
+    .choice-path h2,.choice-path p
+    {
+        color: white;
+    }
+    .content-path {
+        height: 291px;
+    }
+    .box-footer{
+        height: 464px;
+    }
+     img.img-banner.pure-img-responsive.img-header-two {
+        width: 137px;
+        display: block;
+        opacity: 0.1;
+        margin-left: 220px;
+        margin-top: -42px;
+    }
+    img.img-banner.pure-img-responsive.img-header-one {
+        opacity: 0.1;
+        width: 137px;
+        display: block;
+        margin-left: 204px;
+        margin-top: -249px;
+    }
+    
+    .img-vuong {
+        position: absolute;
+        right: 35px;
+        top: 205px;
+    }
+    h2.color-white{
+        font-size: 30pt;
+    } 
+   .trainform{
+      transform: rotate(332deg) scale(1.5) skew(-14deg) translate(-32px);
+      -webkit-transform: rotate(340deg) scale(2.5) skew(0deg) translate(-36px);
+      -moz-transform: rotate(329deg) scale(1.5) skew(-14deg) translate(-32px);
+      -o-transform: rotate(329deg) scale(1.5) skew(-14deg) translate(-32px);
+      -ms-transform: rotate(329deg) scale(1.5) skew(-14deg) translate(-32px);
+      top: 140px;
+      height: 246px;
+      z-index: 0;
+      position: inherit;
+      background-color: #0d72b9;
+      position:  relative;
+    }
+/* End of Your Generated css 
     /* ------------------menu change color -------------------*/
      .menu-change ul.pure-menu-list ul.pure-menu-children{
          -webkit-box-shadow: 2px 11px 18px 2px rgba(0, 0, 0, 0.08);
@@ -667,12 +795,12 @@ p.name-author {
 
     /*----------splat-container--------------------*/
     .splash-container{
-        background: linear-gradient(148deg, #f4f4f4 13%,#f4f4f4 43%,#0d72b9 20.4%,#0d72b9 112%);
+       
     }
     
     .content.splash-content {
-        padding-top: 12em;
-        
+        padding-top: 7em;
+        overflow: hidden;
     }
     .splash-content h1 {
         line-height: 42px;
@@ -704,7 +832,26 @@ p.name-author {
 
 /*----------------------------------------- Larger than desktop -----------------------------------------*/
 @media (min-width: 1000px) {
- 
+    img.img-banner.pure-img-responsive{
+        width: 258px;
+    }
+    img.img-banner.pure-img-responsive.img-header-two {
+        width: 173px;
+        display: block;
+        opacity: 0.1;
+        margin-left: 196px;
+        margin-top: 3px;
+    }
+    img.img-banner.pure-img-responsive.img-header-one {
+        opacity: 0.1;
+        width: 180px;
+        display: block;
+        margin-left: 159px;
+        margin-top: -327px;
+    }
+     .box-second{
+        padding-bottom: 40px;
+    }
     .line-left{
         border-left: 1px solid #cccccc;
     }
@@ -719,14 +866,16 @@ p.name-author {
 
 /*-----------------------------------------Larger than Desktop HD -----------------------------------------*/
 @media (min-width: 1200px) {
-   
+    .content-path {
+        height: auto;
+    }
     .content {
         padding: 0 100px;
     }
     
     
 /*--------------- splash-container ----------------------------*/
-    img.img-banner{
+    img.img-banner.pure-img-responsive{
         width: 50%;
     }
     .img-learn-plan{
